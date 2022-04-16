@@ -1,0 +1,103 @@
+/* black tab text color */
+#TabsToolbar:not(:-moz-lwtheme) .tabbrowser-tab {
+    color: var(black) !important;
+}
+
+/* default tabs */
+#TabsToolbar:not(:-moz-lwtheme) .tabbrowser-tab .tab-content {
+    border: 2 2 0 2 !important;
+    border-image: url("tabbar/tab.png") !important;
+    border-image-width: 2px 2px 0px 2px !important;
+    border-image-slice: 2 2 0 2 !important;
+}
+/* selected tabs */
+#TabsToolbar:not(:-moz-lwtheme) .tabbrowser-tab .tab-content[selected="true"] {
+    border: 3 2 0 2 !important;
+    border-image: url("tabbar/tab-active.png") !important;
+    border-image-width: 3px 2px 0px 2px !important;
+    border-image-slice: 3 2 0 2 !important;
+}
+/* hovered tabs */
+#TabsToolbar:not(:-moz-lwtheme) .tabbrowser-tab:hover .tab-content:not([selected="true"]) {
+    border: 2 2 0 2 !important;
+    border-image: url("tabbar/tab-hover.png") !important;
+    border-image-width: 2px 2px 0px 2px !important;
+    border-image-slice: 2 2 0 2 !important;
+    background-color: unset;
+}
+
+/* unloaded/pending tabs */
+#TabsToolbar:not(:-moz-lwtheme) .tabbrowser-tab[pending] .tab-content {
+    border: 2 2 0 2 !important;
+    border-image: url("tabbar/tab-hover.png") !important;
+    border-image-width: 2px 2px 0px 2px !important;
+    border-image-slice: 2 2 0 2 !important;
+}
+
+#TabsToolbar:not(:-moz-lwtheme) :-moz-any(.tabs-newtab-button/*,#tabs-newtab-button*/), 
+#TabsToolbar:not(:-moz-lwtheme) :-moz-any(.tabs-newtab-button/*,#tabs-newtab-button*/):hover {
+    margin-bottom: -1px !important;
+    border: 2 2 0 2 !important;
+    border-image: url("tabbar/tab.png") !important;
+    border-image-width: 2px 2px 0px 2px !important;
+    border-image-slice: 2 2 0 2 !important;
+}
+
+#TabsToolbar:not(:-moz-lwtheme) .tabbrowser-tab .tab-line {
+    display: none !important;
+}
+
+#TabsToolbar:not(:-moz-lwtheme) .tabbrowser-tab::after,
+#TabsToolbar:not(:-moz-lwtheme) .tabbrowser-tab::before {
+    display: none !important;
+}
+
+/* Show only on active */
+.tabbrowser-tab:not([selected="true"]) .tab-close-button {
+    visibility: collapse !important;
+}
+
+#tabbrowser-tabs .tabbrowser-tab[selected="true"] .tab-close-button {
+    visibility: visible !important;
+}
+
+/* Tabs on bottom */
+#navigator-toolbox toolbar:not(#nav-bar):not(#toolbar-menubar) {
+    -moz-box-ordinal-group:10;
+}
+#TabsToolbar {
+    -moz-box-ordinal-group:1000!important;
+}
+
+#TabsToolbar {
+    display: block !important;
+    position: relative !important;
+    bottom: 0px !important;
+    width: 100vw !important;
+    -moz-appearance: none !important;
+}
+
+.toolbar-items {
+    height: 29px !important;
+}
+
+#tabbrowser-tabs, #tabbrowser-tabs .toolbar-items {
+    width: 100vw !important;
+}
+
+/* #main-window:not([chromehidden*="toolbar"]) #navigator-toolbox { */
+/* padding-bottom: var(--tab-min-height) !important; */
+/* } */
+
+box#navigator-toolbox-background {
+    display: relative !important;
+    height: 60px !important;
+}
+
+toolbox#navigator-toolbox {
+    height: 60px !important;
+}
+
+toolbar@PersonalToolbar* {
+    display: none !inportant;
+}
